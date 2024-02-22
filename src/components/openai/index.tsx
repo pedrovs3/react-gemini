@@ -1,13 +1,12 @@
 import OpenAi from 'openai'
 import { useState } from "react"
-import { InputWithLabel } from "../ui/input"
 import { Button } from "../ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card"
 import Markdown from "react-markdown"
 import { TextareaWithLabel } from '../ui/textarea'
 
 export const OpenAiGpt = () => {
-  const [response, setResponse] = useState<string | null>(null)
+  const [response, ] = useState<string | null>(null)
   const [prompt, setPrompt] = useState<string>('')
 
   const openai = new OpenAi({ apiKey: import.meta.env.VITE_GPT_KEY, dangerouslyAllowBrowser: true });
@@ -19,8 +18,7 @@ export const OpenAiGpt = () => {
       model: "gpt-3.5-turbo",
     });
 
-    setResponse(completion.data.choices[0].message.content);
-  
+    // TODO: handle the response
     console.log(completion);
   }
 

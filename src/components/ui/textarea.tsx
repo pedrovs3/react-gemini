@@ -10,6 +10,7 @@ export interface TextareaProps
 
 const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
   ({ className, ...props }, ref) => {
+
     return (
       <div className={cn(
         "flex min-h-[60px] w-full rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-sm placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50",
@@ -20,8 +21,12 @@ const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
         )}
       <textarea
         className="w-full h-full bg-transparent focus-visible:outline-none focus-visible:ring-0 "
-        onFocus={(e) => e.target.parentNode.classList.add('focus-input')}
-        onBlur={(e) => e.target.parentNode.classList.remove('focus-input')}
+        /* eslint-disable-next-line @typescript-eslint/ban-ts-comment */
+        // @ts-ignore
+        onFocus={(e) => e.target.parentNode?.classList.add('focus-input')}
+        /* eslint-disable-next-line @typescript-eslint/ban-ts-comment */
+        // @ts-ignore
+        onBlur={(e) => e.target.parentNode?.classList.remove('focus-input')}
         ref={ref}
         {...props}
       />
