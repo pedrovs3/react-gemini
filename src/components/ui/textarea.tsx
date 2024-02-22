@@ -24,7 +24,7 @@ const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
         onBlur={(e) => e.target.parentNode.classList.remove('focus-input')}
         ref={ref}
         {...props}
-      />   
+      />
       </div>
     )
   }
@@ -37,7 +37,7 @@ interface InputWithLabelProps extends TextareaProps {
 
 const TextareaWithLabel = ({label, ...props}: InputWithLabelProps) => {
   return (
-    <div className="grid w-full items-center gap-1.5">
+    <div className="grid w-full items-center gap-1.5 font-code">
       <Label htmlFor={props.id}>{label}</Label>
         <Textarea id={props.id} placeholder={props.placeholder} {...props}/>
     </div>

@@ -32,7 +32,12 @@ export const Gemini = () => {
           <CardTitle className="text-xl">Generate content with Gemini</CardTitle>
         </CardHeader>
         <CardContent className="flex flex-col gap-5">
-          <TextareaWithLabel label="Prompt" value={prompt} onChange={(e) => setPrompt(e.target.value)} prefix="dada/"/>
+          <TextareaWithLabel
+            label="Prompt"
+            value={prompt}
+            onChange={(e) => setPrompt(e.target.value)}
+            prefix="$"
+          />
           <Button className="w-full" onClick={handleSubmit}>Submit</Button>
 
           {response && (
@@ -41,7 +46,7 @@ export const Gemini = () => {
               <CardTitle>AI response: </CardTitle>
             </CardHeader>
             <CardContent>
-              <Markdown className={'px-4 py-2 bg-zinc-100 rounded-sm max-h-[300px] overflow-y-scroll'}>{response}</Markdown>
+              <Markdown className={'px-4 py-2 bg-zinc-900 rounded-sm max-h-[300px] overflow-y-scroll'}>{response}</Markdown>
             </CardContent>
             </Card>
           )}

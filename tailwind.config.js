@@ -72,6 +72,12 @@ module.exports = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
     },
+    fontFamily: {
+      sans: ["Inter", "sans-serif"],
+      serif: ["Merriweather", "serif"],
+      mono: ["Roboto Mono", "monospace"],
+      code: ["Fira Code", "monospace"],
+    },
   },
   plugins: [require("tailwindcss-animate")],
 }

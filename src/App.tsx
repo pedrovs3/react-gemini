@@ -9,7 +9,7 @@ const options = [
 
 function App() {
   return(
-    <main className={'min-h-screen w-screen overflow-x-hidden flex justify-center items-center flex-col gap-5'}>
+    <main className={'dark subpixel-antialiased bg-background min-h-screen w-screen overflow-x-hidden flex justify-center items-center flex-col gap-5'}>
       <Tabs defaultValue={options[0].value} className="w-full max-w-screen-lg">
         <TabsList className="grid grid-cols-2 fixed top-10 w-[500px] inset-x-0 mx-auto">
           {options.map((option) => (
