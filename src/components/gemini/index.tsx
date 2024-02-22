@@ -1,6 +1,5 @@
 import { GoogleGenerativeAI } from "@google/generative-ai"
 import { useState } from "react"
-import { InputWithLabel } from "../ui/input"
 import { Button } from "../ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card"
 import Markdown from "react-markdown"
