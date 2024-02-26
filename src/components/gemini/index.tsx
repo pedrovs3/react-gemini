@@ -3,7 +3,7 @@ import { Button } from "../ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card"
 import Markdown from "react-markdown"
 import { TextareaWithLabel } from "../ui/textarea"
-import {useGeminiChat} from "@/context/chat.context.tsx";
+import {useGeminiChat} from "@/hooks/gemini-chat.tsx";
 
 export const Gemini = () => {
   const { chatSession } = useGeminiChat()
