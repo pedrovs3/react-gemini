@@ -3,7 +3,7 @@ name: feat
 about: Use for add an feat in project
 title: "[PLATAFORMA/MVNO] - Atividade"
 labels: ''
-assignees: pedrovs3
+assignees: {{username}}
 
 ---
 
