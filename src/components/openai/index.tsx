@@ -17,8 +17,7 @@ export const OpenAiGpt = () => {
       stream: true,
       model: "gpt-3.5-turbo",
     });
-
-    // TODO: handle the response
+    
     console.log(completion);
   }
 
